@@ -3,7 +3,7 @@ package com.lsh.exam.demo.controller;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lsh.exam.demo.service.MemberService;
@@ -23,7 +23,7 @@ public class UsrMemberController {
    }
 
    // 액션 메서드 시작
-   @RequestMapping("/usr/member/doJoin")
+   @GetMapping("/usr/member/doJoin")
    @ResponseBody
    public ResultData<Member> doJoin(String loginId, String loginPw,String name, String nickname, String cellphoneNo, String email) {
    
@@ -64,7 +64,7 @@ public class UsrMemberController {
       return ResultData.newData(joinRd, "member", member);
    }
    
-   @RequestMapping("/usr/member/doLogout")
+   @GetMapping("/usr/member/doLogout")
    @ResponseBody
    public ResultData<Member> doLogout(HttpSession httpSession) {
       
@@ -83,7 +83,7 @@ public class UsrMemberController {
       return ResultData.from("S-2", "로그아웃 되었습니다.");
    }
    
-   @RequestMapping("/usr/member/doLogin")
+   @GetMapping("/usr/member/doLogin")
    @ResponseBody
    public ResultData<Member> doLogin(HttpSession httpSession, String loginId, String loginPw) {
       
@@ -123,7 +123,7 @@ public class UsrMemberController {
    
    
    
-   @RequestMapping("/usr/member/getMembers")
+   @GetMapping("/usr/member/getMembers")
    @ResponseBody
    public List<Member> getMembers() {
       return memberService.getMembers();

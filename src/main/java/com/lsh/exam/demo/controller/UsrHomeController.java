@@ -1,20 +1,20 @@
 package com.lsh.exam.demo.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class UsrHomeController {
 	
 	
 	
-	@RequestMapping("/usr/home/main")
+	@GetMapping("/usr/home/main")
 	public String showMain() {
 		return "usr/home/main";
 	}
 	
 	
-	@RequestMapping("/")
+	@GetMapping("/")
 	public String showRoot() {
 		return "redirect:/usr/home/main";
 	}
