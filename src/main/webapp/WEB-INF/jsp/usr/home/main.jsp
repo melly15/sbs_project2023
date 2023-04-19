@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>메~</title>
-</head>
-<body>
-	<h1>안녕?</h1>
-</body>
-</html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="pageTitle" value="메인"/>
+<%@include file="../common/head.jspf" %>
+	<div>
+	로렘이 머람? Lorem?
+	</div>
+	
+<%@include file="../common/foot.jspf" %>
