@@ -12,8 +12,11 @@
 	</insert>
 	
 	<select id="getArticles" resultType="Article">
-		SELECT * 
-		FROM article 
+		SELECT A.*,
+		M.nickname AS extra__writerName
+		FROM article as A
+		LEFT JOIN member as M
+		on A.memberID = M.id
 		ORDER BY 
 		id DESC
 	</select>

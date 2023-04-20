@@ -1,7 +1,5 @@
 package com.lsh.exam.demo.vo;
 
-import java.util.Date;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,10 +9,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Article {
 	private int id;
-	private Date regDate;
-	private Date updateDate;
+	private String regDate;
+	private String updateDate;
 	private int memberId;
 	private String title;
 	private String body;
+	
+	private String extra__writerName;
 
 }

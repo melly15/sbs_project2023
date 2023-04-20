@@ -1,10 +1,30 @@
 @font-face {
-    font-family: 'MaplestoryOTFBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'MaplestoryOTFBold';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
-html> body{
+html>body {
 	font-family: 'MaplestoryOTFBold';
-	}
+}
+
+/* 라이브러리 */
+.table-box-type-1>table {
+	width: 100%;
+}
+
+.table-box-type-1>table th, .table-box-type-1>table td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.btn-text-link {
+	color: blue;
+}
+
+.btn-text-link:hover {
+	text-decoration: underline;
+}
