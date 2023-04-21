@@ -10,7 +10,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @Component
 public class NeedLoginInterceptor implements HandlerInterceptor{
-   //로그인 담당 interceptor
+   
+	//로그인 담당 interceptor
    @Override
    public boolean preHandle(HttpServletRequest req, HttpServletResponse resp, Object handler) throws Exception {
       Rq rq = (Rq)req.getAttribute("rq");
