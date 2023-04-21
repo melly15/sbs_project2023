@@ -67,23 +67,18 @@ public class UsrMemberController {
       return ResultData.newData(joinRd, "member", member);
    }
    
-   @GetMapping("/usr/member/doLogout")
+   @RequestMapping("/usr/member/doLogout")
    @ResponseBody
-   public ResultData<Member> doLogout(HttpSession httpSession) {
+   public String doLogout(HttpServletRequest req) {
+	  Rq rq = (Rq) req.getAttribute("rq");
       
-      boolean isLogined = false;
-      
-      if (httpSession.getAttribute("loginedMemberId") == null) {
-         isLogined = true;
+      if (!rq.isLogined()) {
+         return Ut.jsHistoryBack("이미 로그아웃 상태입니다.");
       }
       
-      if (isLogined) {
-         return ResultData.from("S-1", "이미 로그아웃 상태입니다.");
-      }
+      rq.logout();
       
-      httpSession.removeAttribute("loginedMemberId");
-      
-      return ResultData.from("S-2", "로그아웃 되었습니다.");
+      return Ut.jsReplace("로그아웃 되었습니다.","/");
    }
    
    @RequestMapping("/usr/member/doLogin")
@@ -119,7 +114,7 @@ public class UsrMemberController {
       return Ut.jsReplace(Ut.f("%s님 환영합니다.", member.getNickname()), "/");
    }
 	@RequestMapping("/usr/member/login")
-	public String showLogin(HttpSession httpSession) {
+	public String showLogin() {
 		return "usr/member/login";
 	}
    
