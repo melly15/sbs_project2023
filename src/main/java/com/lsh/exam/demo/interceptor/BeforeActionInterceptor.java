@@ -19,6 +19,7 @@ public class BeforeActionInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest req, HttpServletResponse resp, Object handler) throws Exception {
 		Rq rq = new Rq(req, resp, memberService);
+		resp.setContentType("text/html; charset=UTF-8");
 		req.setAttribute("rq", rq);
 		System.out.println("실행가능?");
 		

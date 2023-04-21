@@ -87,18 +87,43 @@ CREATE TABLE article (
   email = 'admin@gmail.com';
   
   SELECT * FROM MEMBER;
-<<<<<<< HEAD
 
-#게시물 테이블에 회원정보 추가
-ALTER TABLE article ADD COLUMN memberId INT(10) UNSIGNED NOT NULL AFTER `updateDate`;
-
-#기존 게시물의 작성자를 2번으로 지정
-UPDATE article
-SET memberId = 2;
-WHERE memberid = 0;
-
-
-SELECT * FROM article;  
-=======
+#게시판 테이블 생성
+  CREATE TABLE `board` (
+    id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    regDate DATETIME NOT NULL,
+    updateDate DATETIME NOT NULL,
+    `code` CHAR(50) NOT NULL COMMENT 'notice(공지사항), free1(자유게시판1), free2(자유게시판2,...',
+    `name` CHAR(50) NOT NULL COMMENT '게시판 이름',
+    delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '삭제여부(0=탈퇴전, 1=탈퇴)',
+    delDate DATETIME COMMENT '삭제날짜'
+  );
+  #기본 게시판 생성
+  INSERT INTO `board`
+  SET regDate = NOW(),
+  updateDate = NOW(),
+  `code` = 'notice',
+  `name` = '공지사항';
+   
+  INSERT INTO `board`
+  SET regDate = NOW(),
+  updateDate = NOW(),
+  `code` = 'free1',`board`
+  `name` = '자유';
   
->>>>>>> 95ab8d053d1410be8fea6a421f7026ca9749d181
+  
+  SHOW TABLES
+  
+  SELECT * FROM article
+
+  
+  UPDATE article
+  SET boardId = 1
+  WHERE id IN(1,2);
+  
+  UPDATE article
+  SET boardId = 2
+  WHERE id IN(4);
+  
+  SELECT * FROM board WHERE id = 1;
+  SELECT * FROM board WHERE id = 2;
