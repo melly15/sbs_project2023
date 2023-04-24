@@ -15,12 +15,11 @@ public interface ArticleRepository {
 	public Article getForPrintArticle(@Param("id") int id);
 
 	// @Select("SELECT * FROM article ORDER BY id DESC")
-	public List<Article> getForPrintArticles();
+	public List<Article> getForPrintArticles(@Param("boardId") int boardId,@Param("limitStart") int limitStart,@Param("limitTake") int limitTake);
 
 	// @Insert("INSERT INTO article SET regDate = NOW(), updateDate = NOW(), title =
 	// #{title}, `body`= #{body}")
-	public void writeArticle(@Param("memberId") int memberId, @Param("title") String title, @Param("body") String body);
-
+	public void writeArticle(@Param("memberId") int memberId, @Param("boardId") int boardId, @Param("title") String title, @Param("body") String body);
 	// delete from article where id = ?
 	// @Delete("DELETE FROM article WHERE id = #{id}")
 	public void deleteArticle(@Param("id") int id);
@@ -33,4 +32,5 @@ public interface ArticleRepository {
 
 	// @Select("SELECT LAST_INSERT_ID()")
 	public int getLastInsertId();
+	public int getArticlesCount(@Param("boardId") int boardId);	
 }

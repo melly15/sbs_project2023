@@ -12,18 +12,18 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @Component
 public class BeforeActionInterceptor implements HandlerInterceptor {
+	private Rq rq;
+	
+	public BeforeActionInterceptor(Rq rq) {
+		this.rq = rq;
+	}
 	
 	@Autowired
 	private MemberService memberService;
 	
 	@Override
 	public boolean preHandle(HttpServletRequest req, HttpServletResponse resp, Object handler) throws Exception {
-		Rq rq = new Rq(req, resp, memberService);
-		resp.setContentType("text/html; charset=UTF-8");
-		req.setAttribute("rq", rq);
-		System.out.println("실행가능?");
-		
+		rq.initOnBeforeActionInterceptor();
 		return HandlerInterceptor.super.preHandle(req, resp, handler);
 	}
-
 }
