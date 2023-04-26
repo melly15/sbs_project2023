@@ -15,6 +15,9 @@ public class Board {
 	private String name;
 	private boolean delStatus;
 	private boolean delDate;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 
 }

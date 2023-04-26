@@ -1,4 +1,5 @@
 @font-face {
+<<<<<<< HEAD
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
     font-weight: normal;
@@ -14,6 +15,26 @@ html > body {
 }
 
 .table-box-type-1 > table th, .table-box-type-1>table td {
+=======
+	font-family: 'MaplestoryOTFBold';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html>body {
+	font-family: 'MaplestoryOTFBold';
+}
+
+/* 라이브러리 */
+.table-box-type-1>table {
+	width: 100%;
+}
+
+.table-box-type-1>table th, .table-box-type-1>table td {
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 	border: 1px solid black;
 	padding: 10px;
 }
@@ -23,5 +44,9 @@ html > body {
 }
 
 .btn-text-link:hover {
+<<<<<<< HEAD
 	text-decoration: underline;	
+=======
+	text-decoration: underline;
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 }

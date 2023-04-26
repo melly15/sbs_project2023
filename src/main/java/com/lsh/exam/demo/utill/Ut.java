@@ -30,16 +30,25 @@ public class Ut {
 		
 		return Ut.f("""
 				<script>
+<<<<<<< HEAD
 					const msg = '%s'.trim();
 					if (msg.length > 0) {
 						alert(msg);
 					}
 					history.back();
+=======
+				const msg = '%s'.trim();
+				if (msg.length > 0) {
+					alert(msg);
+				}
+				history.back();
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 				</script>
 				""", msg);
 	}
 	
 	public static String jsReplace(String msg, String uri) {
+<<<<<<< HEAD
 		if (msg == null ) {
 			msg = "";
 		}
@@ -54,6 +63,22 @@ public class Ut {
 						alert(msg);
 					}
 					location.replace('%s');
+=======
+		if(msg == null) {
+			msg="";
+		}
+		if(msg == null) {
+			uri="";
+		}
+		
+		return Ut.f("""
+				<script>
+				const msg = '%s'.trim();
+				if (msg.length > 0) {
+					alert(msg);
+				}
+				location.replace('%s')
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 				</script>
 				""", msg, uri);
 	}

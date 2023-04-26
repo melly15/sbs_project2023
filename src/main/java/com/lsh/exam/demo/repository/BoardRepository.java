@@ -8,6 +8,7 @@ import com.lsh.exam.demo.vo.Board;
 
 @Mapper
 public interface BoardRepository {
+<<<<<<< HEAD
 	@Select("""
 			SELECT *
 			FROM board AS B
@@ -16,3 +17,14 @@ public interface BoardRepository {
 			""")
 	Board getBoardById(@Param("id") int id);
 }
+=======
+	
+	@Select("""
+			select * 
+			from board as b
+			where b.id = #{id}
+			and b.delstatus = 0
+			""")
+	Board getBoardById(@Param("id") int id);
+}
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20

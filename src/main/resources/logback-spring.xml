@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 <configuration>
 
 	<springProperty name="LOG_PATH" source="custom.logging.dir" />

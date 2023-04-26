@@ -7,6 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.lsh.exam.demo.interceptor.BeforeActionInterceptor;
 import com.lsh.exam.demo.interceptor.NeedLoginInterceptor;
+<<<<<<< HEAD
 
 @Configuration
 public class MyWebMvcConfigurer implements WebMvcConfigurer {
@@ -30,3 +31,30 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
 	}
 
 }
+=======
+@Configuration
+public class MyWebMvcConfigurer implements WebMvcConfigurer{
+   
+   @Autowired
+   BeforeActionInterceptor beforeActionInterceptor;
+   @Autowired
+   NeedLoginInterceptor needLoginInterceptor;
+
+   @Override
+   public void addInterceptors(InterceptorRegistry registry) {
+      registry.addInterceptor(beforeActionInterceptor)
+            .addPathPatterns("/**")
+            .excludePathPatterns("/error")
+            .excludePathPatterns("/resources/**");
+      
+      registry.addInterceptor(needLoginInterceptor)
+            .addPathPatterns("/usr/article/write")
+            .addPathPatterns("/usr/article/doWrite")
+            .addPathPatterns("/usr/article/modify")
+            .addPathPatterns("/usr/article/doModify")
+            .addPathPatterns("/usr/article/doDelete");
+   }
+   
+   
+}
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20

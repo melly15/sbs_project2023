@@ -1,6 +1,9 @@
 package com.lsh.exam.demo.vo;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,11 +18,14 @@ public class Article {
 	private int memberId;
 	private String title;
 	private String body;
+<<<<<<< HEAD
 	private int hitCount;
 	
 	private int extra__sumReactionPoint;
 	private int extra__goodReactionPoint;
 	private int extra__badReactionPoint;
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 	
 	private String extra__writerName;
 	private boolean extra__actorCanDelete;
@@ -28,9 +34,17 @@ public class Article {
 	public String getRegDateForPrint() {
 		return regDate.substring(2, 16);
 	}
+<<<<<<< HEAD
 	
 	public String getUpdateDateForPrint() {
 		return regDate.substring(2, 16);
 	}
 
 }
+=======
+	public String getUpdateDateForPrint() {
+		return updateDate.substring(2, 16);
+	}
+
+}
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20

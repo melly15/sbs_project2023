@@ -11,12 +11,16 @@ public class ResultData<DT> {
 	private String msg;
 	
 	@Getter
+<<<<<<< HEAD
 	//"id" id ,"article" article
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 	private String data1Name;
 	
 	@Getter
 	private  DT data1;
 	
+<<<<<<< HEAD
 	@Getter
 	//"id" id ,"article" article
 	private String data2Name;
@@ -26,6 +30,12 @@ public class ResultData<DT> {
 		
 	public static ResultData from(String rsultCode, String msg) {
 		
+=======
+	//생성자 만들어서 객체 생성못하게?
+	private ResultData() {}
+	
+	public static ResultData from(String rsultCode, String msg) {
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 		return from(rsultCode, msg , null, null);
 	}
 	
@@ -54,12 +64,15 @@ public class ResultData<DT> {
 		return isSuccess() == false;
 	}
 
+<<<<<<< HEAD
 	public void setData2(String dataName, Object data) {
 		data2Name = dataName;
 		data2 = data;
 		
 	}
 
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 
 
 	

@@ -20,6 +20,7 @@
 		<if test="boardId != 0">
 			WHERE A.boardId = #{boardId}
 		</if>
+<<<<<<< HEAD
 		<if test="searchKeyword != ''">
 		  <choose>
 		    <when test="searchKeywordTypeCode == 'title'">
@@ -39,6 +40,10 @@
 		</if>
 		ORDER BY A.id DESC
 		<if test="limitTake != -1">
+=======
+		ORDER BY id DESC
+		<if test="limitStart != -1">
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 			LIMIT #{limitStart}, #{limitTake}
 		</if>
 	</select>
@@ -58,6 +63,7 @@
 		<if test="boardId != 0">
 			WHERE A.boardId = #{boardId}
 		</if>
+<<<<<<< HEAD
 		<if test="searchKeyword != ''">
 		  <choose>
 		    <when test="searchKeywordTypeCode == 'title'">
@@ -75,6 +81,8 @@
 		    </otherwise>
 		  </choose>
 		</if>
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 	</select>
 	
 	<select id="getLastInsertId" resultType="int">
@@ -100,10 +108,13 @@
 		</set>
 		WHERE id = #{id}
 	</update>
+<<<<<<< HEAD
 	
 	<update id="increaseHitCount">
 		UPDATE article
 		SET hitCount = hitCount + 1
 		WHERE id = #{id}
 	</update>
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 </mapper>

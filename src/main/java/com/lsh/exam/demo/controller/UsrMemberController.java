@@ -3,6 +3,10 @@ package com.lsh.exam.demo.controller;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
+<<<<<<< HEAD
+=======
+import org.springframework.web.bind.annotation.GetMapping;
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -12,6 +16,12 @@ import com.lsh.exam.demo.vo.Member;
 import com.lsh.exam.demo.vo.ResultData;
 import com.lsh.exam.demo.vo.Rq;
 
+<<<<<<< HEAD
+=======
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
 @Controller
 public class UsrMemberController {
 	private MemberService memberService;
