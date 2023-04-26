@@ -3,8 +3,18 @@ server:
 spring:
   mvc:
     view:
+<<<<<<< HEAD
      prefix: /WEB-INF/jsp/
      suffix: .jsp
+=======
+<<<<<<< HEAD
+     prefix: /WEB-INF/jsp/
+     suffix: .jsp
+=======
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     url: jdbc:log4jdbc:mysql://127.0.0.1:3306/sbs_proj_2023?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useOldAliasMetadataBehavior=true&zeroDateTimeNehavior=convertToNull
@@ -16,4 +26,14 @@ mybatis:
 custom:
   logging:
     dir: log
+<<<<<<< HEAD
     level: debug
+=======
+<<<<<<< HEAD
+    level: debug
+=======
+    level: debug
+    
+    
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c

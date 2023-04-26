@@ -1,8 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="ko" class="light" data-them="light">
+=======
+<<<<<<< HEAD
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+=======
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+<!DOCTYPE html>
+<html lang="ko" class="light" data-theme="light">
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 <head>
 	<meta charset="UTF-8">
 	<title>${pageTitle}</title>
@@ -13,7 +25,15 @@
 	<!-- 노말라이즈, 라이브러리까지 한번에 해결 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css" />
 	
+<<<<<<< HEAD
 	<!-- 데이지 UI -->
+=======
+<<<<<<< HEAD
+	<!-- 데이지 UI -->
+=======
+	<!-- 데이지UI -->
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 	<link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
 	
 	<!-- 폰트어썸 불러오기 -->
@@ -21,8 +41,18 @@
 	
 	<!-- 사이트 공통 CSS -->
 	<link rel="stylesheet" href="/resource/common.css" />
+<<<<<<< HEAD
 	<!-- 사이트 공통 JS defer은 제일 나중에 실행하라고 하는거임 footer에 넣을때는 빼도됨-->
 	<script src="/resource/common.js" defer="defer"></script>
+=======
+<<<<<<< HEAD
+	<!-- 사이트 공통 JS defer은 제일 나중에 실행하라고 하는거임 footer에 넣을때는 빼도됨-->
+	<script src="/resource/common.js" defer="defer"></script>
+=======
+	<!-- 사이트 공통 JS -->
+	<script src="resource/common.js" defer="defer"></script>
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 </head>
 <body>
 	<header>
@@ -39,7 +69,15 @@
             <span>홈</span>
           </a>
         </li>
+<<<<<<< HEAD
           <li>
+=======
+<<<<<<< HEAD
+          <li>
+=======
+        <li>
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
           <a href="/usr/article/write" class="h-full flex items-center px-3 hover:underline">
             <span>작성</span>
           </a>
@@ -51,6 +89,10 @@
         </li>
         <li>
           <a href="/usr/article/list?boardId=2" class="h-full flex items-center px-3 hover:underline">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
             <span>자유 게시판</span>
           </a>
         </li>
@@ -67,6 +109,27 @@
 	            <span>로그아웃</span>
 	          </a>
 	        </li>
+<<<<<<< HEAD
+=======
+=======
+            <span>자유게시판</span>
+          </a>
+        </li>
+        <c:if test="${!rq.isLogined() }">
+        	<li>
+	          <a href="/usr/member/login" class="h-full flex items-center px-3 hover:underline">
+	            <span>로그인</span>
+	          </a>
+        	</li>
+        </c:if>
+        <c:if test="${rq.isLogined() }">
+        	<li>
+	          <a href="/usr/member/doLogout" class="h-full flex items-center px-3 hover:underline">
+	            <span>로그아웃</span>
+	          </a>
+        	</li>
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
         </c:if>
       </ul>
     </div>

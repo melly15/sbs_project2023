@@ -13,12 +13,24 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.Getter;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 
 @Component
 @Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
 //자동으로 의존성 주입해줌
 public class Rq {
 	
+<<<<<<< HEAD
+=======
+=======
+@Component
+@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
+public class Rq {
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 	@Getter
 	private boolean isLogined;
 	@Getter
@@ -37,11 +49,23 @@ public class Rq {
 		this.session = req.getSession();
 		
 		boolean isLogined = false;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 		
 		int loginedMemberId = 0;
 		
 		if (session.getAttribute("loginedMemberId") != null) {
 			
+<<<<<<< HEAD
+=======
+=======
+		int loginedMemberId = 0;
+		
+		if ( session.getAttribute("loginedMemberId") != null) {
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 			isLogined = true;
 			loginedMemberId = (int) session.getAttribute("loginedMemberId");
 			loginedMember = memberService.getMemberById(loginedMemberId);
@@ -69,18 +93,39 @@ public class Rq {
 	}
 	
 	public void println(String str) {
+<<<<<<< HEAD
 		
+=======
+<<<<<<< HEAD
+		
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 		print(str + "\n");
 	}
 
 	public void login(Member member) {
 		session.setAttribute("loginedMemberId", member.getId());
+<<<<<<< HEAD
 		
+=======
+<<<<<<< HEAD
+		
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 	}
 
 	public void logout() {
 		session.removeAttribute("loginedMemberId");
+<<<<<<< HEAD
 		
+=======
+<<<<<<< HEAD
+		
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 	}
 	
 	public String historyBackJsOnview(String msg) {
@@ -90,11 +135,22 @@ public class Rq {
 	}
 
 	public String jsHistoryBack(String msg) {
+<<<<<<< HEAD
 		
+=======
+<<<<<<< HEAD
+		
+=======
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 		return Ut.jsHistoryBack(msg);
 	}
 	
 	public String jsReplace(String msg, String uri) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 		
 		return Ut.jsReplace(msg,uri);
 	}
@@ -105,3 +161,17 @@ public class Rq {
 	
 	
 }
+<<<<<<< HEAD
+=======
+=======
+		return Ut.jsReplace(msg, uri);
+	}
+
+	// 이 메서드는 Rq객체가 자연스럽게 생성되도록 유도하는 역할을 한다.
+	// 지우면 안되고,
+	// 편의를 위해 BeforeActionInterceptor에서 꼭 호출해줘야 한다.
+	public void initOnBeforeActionInterceptor() {
+	}
+}
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c

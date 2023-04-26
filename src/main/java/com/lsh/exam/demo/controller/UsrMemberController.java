@@ -3,6 +3,13 @@ package com.lsh.exam.demo.controller;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import org.springframework.web.bind.annotation.GetMapping;
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -12,6 +19,15 @@ import com.lsh.exam.demo.vo.Member;
 import com.lsh.exam.demo.vo.ResultData;
 import com.lsh.exam.demo.vo.Rq;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
+>>>>>>> 211ab5f59412c5ac91da322a910b1597ad81fd20
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 @Controller
 public class UsrMemberController {
 	private MemberService memberService;
@@ -25,7 +41,10 @@ public class UsrMemberController {
 	@RequestMapping("/usr/member/doJoin")
 	@ResponseBody
 	public ResultData<Member> doJoin(String loginId, String loginPw, String name, String nickname, String cellphoneNo, String email) {
+<<<<<<< HEAD
 			
+=======
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 		if ( Ut.empty(loginId) ) {
 			return ResultData.from("F-1", "loginId(을)를 입력해주세요.");
 		}
@@ -67,7 +86,10 @@ public class UsrMemberController {
 	@RequestMapping("/usr/member/doLogout")
 	@ResponseBody
 	public String doLogout() {
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 		if ( !rq.isLogined() ) {
 			return rq.jsHistoryBack("이미 로그아웃 상태입니다.");
 		}
@@ -85,7 +107,10 @@ public class UsrMemberController {
 	@RequestMapping("/usr/member/doLogin")
 	@ResponseBody
 	public String doLogin(String loginId, String loginPw) {
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 8606f94f27bd2148dfcd878b154cca99c7db0a4c
 		if ( rq.isLogined() ) {
 			return rq.jsHistoryBack("이미 로그인되었습니다.");
 		}
